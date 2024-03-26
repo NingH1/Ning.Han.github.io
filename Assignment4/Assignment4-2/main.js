@@ -1,18 +1,14 @@
-const displayedImage = document.querySelector('.displayed-img');
-const thumbBar = document.querySelector('.thumb-bar');
+//Name: Ning Han
+//File: Silly story generator.html
+//Date: 26 March 2024
+//Description:  creating a fun app that generates random silly stories
 
-const btn = document.querySelector('button');
-const overlay = document.querySelector('.overlay');
+const imageFiles = ['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jpg'];
 
-/* Declaring the array of image filenames */
-
-/* Declaring the alternative text for each image file */
-
-/* Looping through images */
-
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
-
-/* Wiring up the Darken/Lighten button */
+const altTexts = {
+  'pic1.jpg': 'Closeup of a blue human eye',
+  'pic2.jpg': 'Alternative text for second image',
+  'pic3.jpg': 'Alternative text for third image',
+  'pic4.jpg': 'Alternative text for fourth image',
+  'pic5.jpg': 'Alternative text for fifth image'
+};
