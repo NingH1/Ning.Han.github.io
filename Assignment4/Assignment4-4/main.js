@@ -19,15 +19,24 @@ function randomRGB() {
 }
 // Define the EvilCircle class inheriting from the Shape class
 class EvilCircle extends Shape {
-  // Constructor for EvilCircle, initializing its properties
   constructor(x, y) {
-    super(x, y, 20, 20); // Call the constructor of the Shape class
+    super(x, y, 20, 20);
 
-    // Additional properties specific to EvilCircle
     this.color = "white";
     this.size = 10;
   }
+
+  draw() {
+    ctx.beginPath();
+    ctx.strokeStyle = this.color;
+    ctx.lineWidth = 3;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.stroke();
+  }
+  
+  // Other methods such as checkBounds and collisionDetect would go here
 }
+
 
 class Ball {
   constructor(x, y, velX, velY, color, size) {
