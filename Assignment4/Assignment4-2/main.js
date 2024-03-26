@@ -12,3 +12,14 @@ const altTexts = {
   'pic4.jpg': 'Alternative text for fourth image',
   'pic5.jpg': 'Alternative text for fifth image'
 };
+for (let i = 0; i < imageFiles.length; i++) {
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', 'images/' + imageFiles[i]);
+    newImage.setAttribute('alt', altTexts[imageFiles[i]]);
+    newImage.addEventListener('click', function() {
+      displayedImage.setAttribute('src', this.getAttribute('src'));
+      displayedImage.setAttribute('alt', this.getAttribute('alt'));
+    });
+    thumbBar.appendChild(newImage);
+  }
+  
