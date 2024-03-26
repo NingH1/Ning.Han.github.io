@@ -103,6 +103,26 @@ while (balls.length < 25) {
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
+// Create an instance of EvilCircle with random position
+const evilBall = new EvilCircle(random(0, width), random(0, height));
+
+// Add event listener for keyboard controls to move the EvilCircle
+window.addEventListener('keydown', (e) => {
+  switch(e.key) {
+    case 'a':
+      evilBall.x -= evilBall.velX;
+      break;
+    case 'd':
+      evilBall.x += evilBall.velX;
+      break;
+    case 'w':
+      evilBall.y -= evilBall.velY;
+      break;
+    case 's':
+      evilBall.y += evilBall.velY;
+      break;
+  }
+});
 
   for (const ball of balls) {
     ball.draw();
