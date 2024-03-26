@@ -22,4 +22,16 @@ for (let i = 0; i < imageFiles.length; i++) {
     });
     thumbBar.appendChild(newImage);
   }
-  
+  btn.addEventListener('click', function() {
+    const btnClass = btn.getAttribute('class');
+    if (btnClass === 'dark') {
+      btn.setAttribute('class', 'light');
+      btn.textContent = 'Lighten';
+      overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+    } else {
+      btn.setAttribute('class', 'dark');
+      btn.textContent = 'Darken';
+      overlay.style.backgroundColor = 'rgba(0,0,0,0)';
+    }
+  });
+    
