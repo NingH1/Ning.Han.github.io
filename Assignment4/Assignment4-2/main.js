@@ -34,4 +34,13 @@ for (let i = 0; i < imageFiles.length; i++) {
       overlay.style.backgroundColor = 'rgba(0,0,0,0)';
     }
   });
+   // Step 4: Add event listener to each thumbnail image
+   const thumbImages = document.querySelectorAll('.thumb-bar img');
+   thumbImages.forEach(function(thumbImage) {
+     thumbImage.addEventListener('click', function() {
+       displayedImage.setAttribute('src', this.getAttribute('src'));
+       displayedImage.setAttribute('alt', this.getAttribute('alt'));
+     });
+   });
+ });
     
